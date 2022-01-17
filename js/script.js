@@ -6,3 +6,15 @@
 // con difficoltà 3 => tra 1 e 49
 // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
+// ! GRIGLIA
+
+const rows = 10;
+const colums = 10;
+const totalrows = rows * colums;
+const grid = document.getElementById('grid');
+
+for (let i = 0; i < totalrows; i++) {
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    grid.appendChild(cell);
+}
