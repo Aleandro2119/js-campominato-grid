@@ -15,3 +15,18 @@ body{
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/*Header*/
+
+header{
+    height: 80px;
+    background-color: darkgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.menu{
+    padding: 10px 5px;
+}
