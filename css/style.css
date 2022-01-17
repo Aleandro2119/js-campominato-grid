@@ -7,6 +7,7 @@
 
 body{
     font-family: 'Open Sans', sans-serif;
+    background-color: slategray;
 }
 
 
@@ -29,4 +30,22 @@ header{
 
 .menu{
     padding: 10px 5px;
+}
+
+/*Main*/
+
+#grid{
+    width: 700px;
+    height: 700px;
+    border: 1px solid black;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#grid .cell{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+    cursor: pointer;
 }
