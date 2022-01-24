@@ -42,3 +42,25 @@ const extractedNumbers = [];
 // ! Recuperiamo la griglia (PUNTO 1)
 
 const grid = document.getElementById('grid');
+
+// ! Creo le celle (PUNTO 3)
+
+for (let i = 0; i < totalCells; i++) {
+
+    const cellNumber = getUniqueRandomNumber(1, 64, extractedNumbers, getRandomNumber);
+
+
+    extractedNumbers.push(cellNumber);
+
+    // ! Creo la cella (PUNTO 4)
+    const cell = createCell(cellNumber);
+
+    cell.addEventListener('click', () => {
+        cell.classList.toggle('clicked');
+        const colorClass = isEven(cellNumber) ? 'safe' : 'error';
+
+        cell.classList.add(colorClass);
+    });
+
+    grid.appendChild(cell);
+}
