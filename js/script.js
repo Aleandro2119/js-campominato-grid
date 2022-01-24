@@ -6,11 +6,30 @@
 // con difficoltà 3 => tra 1 e 49
 // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
-// ! FUNZIONE Numeri rand
+// ! FUNZIONE Numeri rand and (PUNTO 2)
 
 const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
 
+
+const getUniqueRandomNumber = (min, max, list, randomFunction) => {
+    let randNumber;
+    do {
+        randNumber = randomFunction(min, max);
+    } while (list.includes(randNumber));
+
+    return randNumber;
+};
+
+const createCell = (cellNumber) => {
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    cell.setAttribute('id', cellNumber);
+    cell.innerText = cellNumber;
+    return cell;
+};
+
+const isEven = (number) => number % 2 === 0;
 
 
 // !  COSTANTI LOGICHE
