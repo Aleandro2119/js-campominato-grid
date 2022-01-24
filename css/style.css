@@ -43,9 +43,24 @@ header{
     flex-wrap: wrap;
 }
 
-#grid .cell .firstdifficult{
-    width: calc(100% / 10);
-    height: calc(100% / 10);
-    border: 1px solid black;
-    cursor: pointer;
+#grid .cell {
+  height: calc(100% / 8);
+  width: calc(100% / 8);
+  border: 2px solid black;
+  cursor: pointer;
+  
 }
+
+.clicked {
+    background-color: lightgreen;
+  }
+  
+  .clicked.safe {
+    color: black;
+    background-color: lightskyblue;
+  }
+  
+  .clicked.error {
+    background-color: red;
+  }
+  
